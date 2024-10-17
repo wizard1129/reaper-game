@@ -1,0 +1,32 @@
+import pgzrun
+from random import randint
+
+
+#Pygame Standard for deciding the title of your game window
+TITLE = "Good Shot"
+#Pygame Standard for deciding the width and height for your game window in pixels
+WIDTH = 1000
+HEIGHT = 1000
+
+#variable to stare the message displayed on your screen
+message = ""
+
+#Actor is built-in object in pgzero
+#interacts with other actors, move around on screen
+# like sprite
+reaper = Actor('reaper')
+reaper.pos = 50,50
+
+#defalt function
+def draw():
+    # screen is another built-in object
+    screen.clear()
+    screen.fill(color = (128, 0, 0))
+    reaper.draw()
+
+    screen.draw.text(message, center = (400, 10), fontsize = 30)
+
+    #def place_reaper():
+        #reaper.x = randint(50, WIDTH-50)
+    
+pgzrun.go()
